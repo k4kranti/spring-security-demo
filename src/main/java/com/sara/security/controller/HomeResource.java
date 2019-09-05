@@ -2,6 +2,7 @@ package com.sara.security.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,7 @@ public class HomeResource {
 
     @GetMapping(path = "/secure/user")
     public ResponseEntity<?> user() {
+        System.out.println("**Authentication Object created : " + SecurityContextHolder.getContext().getAuthentication());
         return new ResponseEntity<>("<h1> Hello Welcome User! </h1>", HttpStatus.OK);
     }
 

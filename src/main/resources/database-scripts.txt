@@ -1,0 +1,19 @@
+**********mysql db creation ****
+
+> mysql -u root -p(password)
+
+mysql> show databases // show database
+
+mysql> create database userlogin;  //create new db
+
+mysql> use userlogin; //access db
+
+mysql> create table user(id int(11) unsigned auto_increment primary key not null,username varchar(25) not null, password varchar(25) not null);
+
+mysql>show tables;
+
+mysql> describe user;
+
+mysql> insert into user(username,password) values('user','user');
+
+mysql> insert into user(username,password) values('admin','admin');
