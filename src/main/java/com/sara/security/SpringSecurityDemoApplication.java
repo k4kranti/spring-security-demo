@@ -17,6 +17,7 @@ public class SpringSecurityDemoApplication {
 		SpringApplication.run(SpringSecurityDemoApplication.class, args);
 	}
 
+	//Register the filter based on uri use @Bean
 	@Bean
 	public FilterRegistrationBean<?> getFilterRegistrationBean(){
 		FilterRegistrationBean<AuthenticationFilter> filterBean = new FilterRegistrationBean<>();
@@ -25,4 +26,5 @@ public class SpringSecurityDemoApplication {
 		filterBean.setOrder(2);
 		return filterBean;
 	}
+
 }

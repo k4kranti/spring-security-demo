@@ -15,7 +15,7 @@ public class HomeResource {
     private static final Log logger = LogFactory.getLog(HomeResource.class);
 
     @GetMapping("/secure/home")
-    @CrossOrigin(origins = "http://localhost:8090")
+    //@CrossOrigin(origins = "http://localhost:8090")
     public ResponseEntity<?> home() {
         return new ResponseEntity<>("<h1> Hello Welcome! </h1>", HttpStatus.OK);
     }
